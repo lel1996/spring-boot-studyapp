@@ -1,0 +1,11 @@
+spring:
+  datasource:
+#   数据源基本配置
+    username: root
+    password: rootroot
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://47.102.205.163:3306/app
+    type: com.alibaba.druid.pool.DruidDataSource
+mybatis:
+  config-location: classpath:mybatis/mybatis-config.xml
+  mapper-locations: classpath:mybatis/mapper/*.xml

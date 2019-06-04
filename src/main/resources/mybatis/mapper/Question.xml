@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lierlin.springboo.mapper.QuestionMapper">
+    <select id="QuestionAll" resultType="com.lierlin.springboo.bean.Question">
+        SELECT * FROM `couse`
+    </select>
+    <!--某一科目的题的列表集-->
+    <select id="QuestionList" resultType="com.lierlin.springboo.bean.CourseQ">
+        SELECT * FROM couse_questions WHERE `c_id`=#{cid}
+    </select>
+<!--某一科目的题的列表集中某一专项练习-->
+    <select id="QuestionListOne" resultType="com.lierlin.springboo.bean.CourseListOne">
+        SELECT * FROM `couse_questions_detail` WHERE `cq_id`in (${_parameter})
+    </select>
+
+
+
+
+</mapper>

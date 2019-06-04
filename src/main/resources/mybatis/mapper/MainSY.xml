@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lierlin.springboo.mapper.MainMapper">
+    <select id="SliderImg" resultType="com.lierlin.springboo.bean.MainSlider">
+        SELECT * FROM main_slider_res
+    </select>
+
+    <select id="MainRes" resultType="com.lierlin.springboo.bean.MainRes">
+        SELECT * FROM main_source_res
+    </select>
+
+    <select id="VideoCase" resultType="com.lierlin.springboo.bean.VideoCase">
+        SELECT * FROM main_video_res
+    </select>
+
+    <select id="Recase" resultType="com.lierlin.springboo.bean.MainRes">
+        SELECT * FROM reference_case
+    </select>
+
+</mapper>
